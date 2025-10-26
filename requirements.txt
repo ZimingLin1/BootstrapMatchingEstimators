@@ -1,0 +1,14 @@
+
+numpy
+pandas
+scipy
+scikit-learn
+torch
+matplotlib
+pyarrow
+POT
+tqdm
+
+# ---- git dependencies ----
+git+https://github.com/gsbDBI/ds-wgan.git
+git+https://github.com/gbaydin/hypergradient-descent.git
