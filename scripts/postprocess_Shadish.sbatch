@@ -20,16 +20,6 @@ DATAFILE="data/shadish_generated.feather"
 CSV_OUT="result/Shadish_res.csv"
 TEX_OUT="result/Coverage_Shadish.tex"
 
-# # 如果 postprocess_Shadish.py 放在项目根目录（常见）
-# python -u postprocess_Shadish.py \
-#   --runfile "$RUNFILE" \
-#   --datafile "$DATAFILE" \
-#   --outfile_csv "$CSV_OUT" \
-#   --outfile_tex "$TEX_OUT" \
-#   --alphas "0.10,0.05" \
-#   --scale_k 1000
-
-# 若在包内（例如 bmproject/postprocess_Shadish.py），改用下面这段：
 python -u -m bmproject.postprocess_Shadish \
   --runfile "$RUNFILE" \
   --datafile "$DATAFILE" \
