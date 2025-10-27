@@ -24,7 +24,6 @@ module load Python
 source ~/venvs/BMproject/bin/activate
 cd "$SLURM_SUBMIT_DIR"
 
-# 固定到提交目录下，避免 SCRATCH/PWD 混乱
 OUT_ROOT="$SLURM_SUBMIT_DIR/results_Shadish_array"
 RUN_NAME="Shadish_task-${SLURM_ARRAY_TASK_ID}"
 
