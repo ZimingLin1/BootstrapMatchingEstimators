@@ -120,7 +120,7 @@ Other important CLI flags (already set in the sbatch files):
 After merging:
 
 - `result/out_LDW.feather`, `result/out_Shadish.feather` — concatenation of all per-task results with columns  
-  `N, M, method, est, se, AIse, boot_lo_p90, boot_hi_p90, boot_lo_p95, boot_hi_p95, …`.
+  `N, M, method, est, se, AIse, boot_lo_p90, boot_hi_p90, boot_lo_p95, boot_hi_p95`.
 
 After post-processing:
 
