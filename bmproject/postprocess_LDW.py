@@ -61,7 +61,7 @@ def build_metrics(runs: pd.DataFrame, ate: float, alphas: List[float], scale_k: 
             raise ValueError(f"Missing {lo_col}/{hi_col} in runfile; ensure alpha list includes {a}.")
         runs[f"covered_boot_{tag}"] = ((runs[lo_col] <= ate) & (ate <= runs[hi_col])).astype(int)
 
-    # group by N, M（可变 M 时每个 (N,M) 都单独统计）
+    # group by N, M
     g = runs.groupby(["N", "M"], as_index=False).agg(
         Bias=("error_scaled", "mean"),
         SD=("error_scaled", lambda s: float(np.sqrt(np.mean((s - s.mean()) ** 2)))),
