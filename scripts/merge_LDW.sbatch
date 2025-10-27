@@ -15,7 +15,6 @@ module load Python
 source ~/venvs/BMproject/bin/activate
 cd "$SLURM_SUBMIT_DIR"
 
-# 与 run 脚本保持一致
 OUT_ROOT="$SLURM_SUBMIT_DIR/results_LDW_array"
 OUT_FINAL="$SLURM_SUBMIT_DIR/result/out_LDW.feather"
 
