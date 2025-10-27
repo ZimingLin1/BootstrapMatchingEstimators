@@ -13,7 +13,6 @@
 set -euo pipefail
 mkdir -p logs
 
-# 防止 BLAS 抢核
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
@@ -25,7 +24,7 @@ source ~/venvs/BMproject/bin/activate
 cd "$SLURM_SUBMIT_DIR"
 
 N_RUNS_PIECE=50
-# 固定到提交目录，避免写到 SCRATCH 或双层 BMproject
+
 OUT_ROOT="$SLURM_SUBMIT_DIR/results_LDW_array"
 RUN_NAME="LDW_task-${SLURM_ARRAY_TASK_ID}"
 
